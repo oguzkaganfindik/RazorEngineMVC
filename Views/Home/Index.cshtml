@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    var selamlama = "Razor'a hoşgeldiniz!!";
+    var sayac = 200;
+    var bugunTarihi = DateTime.Now;
+
+    string selamlama2 = "Razor'a hoşgeldiniz";
+    int sayac2 = 200;
+    DateTime bugununTarihi2 = DateTime.Now;
+
+    var fiyat = 60;
+}
+@model List<Customer>
+
+<div>
+@*    @if (fiyat > 50)
+    {
+        <p>Fiyat 50'nin üzerindedir.</p>
+    }
+    else
+    {
+        <p>Fiyat 50'nin altındadır.'</p>
+    }*@
+
+@*@for (int i = 0; i <= 10; i++)
+    {
+        <p>@i</p>
+    }*@
+
+    <h2>Müşteri Bilgileri</h2>
+
+    @foreach (var customer in Model)
+    {
+        <ul>
+            <li>Müşteri No: @customer.CustomerNo</li>
+            <li>Müşteri Adı: @customer.CustomerName</li>
+            <li>Müşteri Yaşı: @customer.CustomerAge</li>
+        </ul>
+        <hr />
+    }
+</div>
